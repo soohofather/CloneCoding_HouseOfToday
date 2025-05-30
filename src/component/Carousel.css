@@ -1,0 +1,6 @@
+.carousel {
+  position: relative;
+  height: 24rem;
+  overflow: hidden;
+  background-color: #e5e7eb;
+}

@@ -1,8 +1,10 @@
 import React from "react";
 import { PlusCircle, Search, ShoppingCart, User } from "lucide-react";
 import "./NavBar.css";
+import { useAppContext } from "../App";
 
 const NavBar = () => {
+  const { setShowWriteModal } = useAppContext();
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -41,7 +43,10 @@ const NavBar = () => {
             </div>
 
             {/* 글쓰기 */}
-            <button className="write-button">
+            <button
+              className="write-button"
+              onClick={() => setShowWriteModal(true)}
+            >
               <PlusCircle style={{ width: "1.25rem", height: "1.25rem" }} />
               <span>글쓰기</span>
             </button>
